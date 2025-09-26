@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 页面标题变化逻辑
     function handleVisibilityChange() {
         if (document.hidden) {
-            document.title = "快点我 °(°ˊДˋ°) ° 快点我吖!!";
+            document.title = "点我吖! °(°ˊДˋ°) ° 快点我吖!!";
             isTitleChanged = true;
         } else if (isTitleChanged) {
             document.title = originalTitle;
