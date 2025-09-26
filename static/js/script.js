@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadMarkdownContent() {
         // 定义Markdown文件与对应容器的映射
         const mdFiles = {
+            'course-experiments':'contents/course-experiments.md',
             'personal-info': 'contents/personal-info.md',
             'awards': 'contents/awards.md',
             'experiences': 'contents/experiences.md'
