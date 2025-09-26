@@ -1,0 +1,33 @@
+# 项目数据配置文件
+course-experiments:
+  - title: "数据结构实验"
+    description: "实现了常见数据结构如链表、树、图等"
+    link: "#"
+  - title: "操作系统实验"
+    description: "进程调度、内存管理等操作系统核心功能实现"
+    link: "#"
+  - title: "数据库实验"
+    description: "SQL查询优化、事务处理等数据库相关实验"
+    link: "#"
+
+competition-materials:
+  - title: "ACM竞赛题解"
+    description: "历年ACM竞赛题目分析与解答"
+    link: "#"
+  - title: "数学建模资料"
+    description: "数学建模竞赛相关资料与论文"
+    link: "#"
+  - title: "创新创业大赛"
+    description: "创新创业大赛项目计划书与演示材料"
+    link: "#"
+
+personal-projects:
+  - title: "个人博客系统"
+    description: "基于React和Node.js的全栈博客系统"
+    link: "#"
+  - title: "在线购物平台"
+    description: "仿淘宝的电子商务平台前端实现"
+    link: "#"
+  - title: "智能家居控制"
+    description: "基于物联网的智能家居控制系统"
+    link: "#"

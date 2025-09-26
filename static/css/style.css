@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 头部样式 */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+header.hidden {
+    transform: translateY(-100%);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.nav-link.active {
+    color: #007bff;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+}
+
+/* 主要内容区域 */
+main {
+    flex: 1;
+    padding-top: 80px; /* 为固定头部留出空间 */
+    padding-bottom: 60px; /* 为页脚留出空间 */
+}
+
+.intro {
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.welcome {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+}
+
+.signature {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* 内容容器 */
+.content-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+    margin-bottom: 2rem;
+}
+
+.content-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 0.5rem;
+}
+
+/* Markdown内容样式 */
+.md-content {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.md-content h1, .md-content h2, .md-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.md-content h1 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 0.5rem;
+}
+
+.md-content h2 {
+    font-size: 1.5rem;
+}
+
+.md-content h3 {
+    font-size: 1.3rem;
+}
+
+.md-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.md-content ul, .md-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.md-content li {
+    margin-bottom: 0.5rem;
+}
+
+.md-content strong {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.md-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.md-content a:hover {
+    text-decoration: underline;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: rgba(44, 62, 80, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* 返回顶部按钮 */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 2rem;
+    }
+    
+    .welcome {
+        font-size: 1.2rem;
+    }
+    
+    .content-container {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    nav {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        padding: 0.5rem;
+    }
+}
