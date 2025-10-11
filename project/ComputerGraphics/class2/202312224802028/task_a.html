@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>任务a</title>
+	<h1>Sierpinski Gasket in 2D</h1>    
+    <div>
+        <label for="subdivisionLevel">请输入迭代次数:</label>
+        <input type="number" id="subdivisionLevel" min="0" max="8" value="0">
+        <button id="generateBtn">生成三角形</button>
+    </div>
+    <br>
+	<div>
+        <canvas id="gl-canvas" width="512" height="512">
+            您的浏览器不支持WebGL，请使用现代浏览器访问此页面。
+        </canvas>
+	</div>
+</head>
+<body>
+    <!-- 顶点着色器 -->
+    <script id="vertex-shader" type="x-shader/x-vertex">
+        attribute vec4 vPosition;
+        void main() {
+            gl_Position = vPosition;
+        }
+    </script>
+
+    <!-- 片段着色器 -->
+    <script id="fragment-shader" type="x-shader/x-fragment">
+        precision mediump float;
+        void main() {
+            gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+        }
+    </script>
+    <script type="text/javascript" src="../202312224802028/common/webgl-utils.js"></script>
+    <script type="text/javascript" src="../202312224802028/common/initShaders.js"></script>
+    <script type="text/javascript" src="../202312224802028/common/gl-matrix-min.js"></script>
+    <script type="text/javascript" src="../202312224802028/js/task_a.js"></script>
+</body>
+</html>
